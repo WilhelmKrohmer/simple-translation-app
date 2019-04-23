@@ -12,6 +12,15 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+/**
+ * This app displays miwok words and their translation.
+ *
+ * The app derives from the android basics course at udacity:
+ * https://eu.udacity.com/course/android-basics-nanodegree-by-google--nd803
+ *
+ * See the original here: https://github.com/udacity/ud839_Miwok
+ */
+
 public class WordAdapter extends ArrayAdapter<Word> {
 
     public WordAdapter(Activity context, ArrayList<Word> words) {

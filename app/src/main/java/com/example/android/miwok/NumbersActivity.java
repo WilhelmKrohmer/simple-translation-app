@@ -6,6 +6,15 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+/**
+ * This app displays miwok words and their translation.
+ *
+ * The app derives from the android basics course at udacity:
+ * https://eu.udacity.com/course/android-basics-nanodegree-by-google--nd803
+ *
+ * See the original here: https://github.com/udacity/ud839_Miwok
+ */
+
 public class NumbersActivity extends AppCompatActivity {
 
     @Override

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -38,11 +39,16 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         Word currentWord = getItem(position);
 
-        TextView defaultWordTextView = listItemView.findViewById(R.id.default_word);
+        ImageView imageView = listItemView.findViewById(R.id.list_item_image);
         assert currentWord != null;
+        imageView.setImageResource(currentWord.getResourceImageId());
+
+        TextView defaultWordTextView = listItemView.findViewById(R.id.default_word);
         defaultWordTextView.setText(currentWord.getDefaultTranslation());
 
+        // First find the correct view out of the resources
         TextView miwokWordTextView = listItemView.findViewById(R.id.miwok_word);
+        // Next set the text by finding the text from currentWord and using the method defined in the word class
         miwokWordTextView.setText(currentWord.getMiwokTranslation());
 
         return listItemView;

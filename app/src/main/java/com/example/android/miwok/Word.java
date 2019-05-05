@@ -13,7 +13,8 @@ public class Word {
 
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private int mImageResourceId;
+    private int mImageResourceId = NO_IMAGE_PROVIDED; //By default the resource ID is set to have no image
+    private static final int NO_IMAGE_PROVIDED = -1; //We define a constant with a value that is out of every usual ID range
 
     public Word (String defaultTranslation, String miwokTranslation){
         mDefaultTranslation = defaultTranslation;
@@ -33,4 +34,7 @@ public class Word {
         return mDefaultTranslation;
     }
     public int getResourceImageId () { return mImageResourceId; }
+    public boolean hasImage () {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
+    }
 }
